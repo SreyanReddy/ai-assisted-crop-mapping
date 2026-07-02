@@ -216,3 +216,10 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+.env
+credentials.json
+.config/earthengine/
