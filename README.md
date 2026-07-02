@@ -1,4 +1,4 @@
-# Crop Type & Cropping Pattern Mapping — Punjab Rice–Wheat Belt
+# Crop Type & Cropping Pattern Mapping - Punjab Rice–Wheat Belt
 
 Multi-season **Sentinel-2 + Random Forest** classification over central Punjab, India. The project maps crop types and cropping *intensity* from satellite imagery, achieving **95.3% accuracy** — and finds that roughly **77% of the classified farmland is double-cropped rice–wheat rotation**, a pattern a simple crop-type map completely hides.
 
@@ -14,13 +14,13 @@ Multi-season **Sentinel-2 + Random Forest** classification over central Punjab, 
 | Classes (cropping pattern) | Double-cropped, Rice-only, Wheat-only, Fallow, Water |
 | Study area | ~11,000 km², central Punjab |
 
-**Headline finding:** ~77% of classified cropland is double-cropped rice–wheat land. The apparent 1:2 Rice:Wheat area ratio in the 4-class map was misleading - "Rice" and "Wheat" are largely the *same* fields at different times of year, not two separate populations.
+**Headline finding:** Nearly 77% of classified cropland is double-cropped rice–wheat land. The apparent 1:2 Rice:Wheat area ratio in the 4-class map was misleading - "Rice" and "Wheat" are largely the *same* fields at different times of year, not two separate populations.
 
 ---
 
 ## What This Project Does
 
-1. Builds cloud-masked median composites for two crop seasons — **Kharif** (monsoon, rice) and **Rabi** (winter, wheat).
+1. Builds cloud-masked median composites for two crop seasons - **Kharif** (monsoon, rice) and **Rabi** (winter, wheat).
 2. Derives a **16-band multi-temporal feature stack**: 6 spectral bands × 2 seasons, plus NDVI and MNDWI per season.
 3. Trains a **Random Forest** classifier on manually verified training polygons.
 4. Produces a **4-class crop-type map** and a **5-class cropping-pattern map**.
@@ -30,10 +30,10 @@ Multi-season **Sentinel-2 + Random Forest** classification over central Punjab, 
 
 ## Tech Stack
 
-- **Google Earth Engine** (Python API) — imagery access, compositing, wall-to-wall classification
-- **geemap** — interactive map + training-polygon digitization
-- **scikit-learn** — Random Forest, accuracy assessment, feature importance
-- **Google Dynamic World** — cropland masking + training-location guidance
+- **Google Earth Engine** (Python API) - imagery access, compositing, wall-to-wall classification
+- **geemap** - interactive map + training-polygon digitization
+- **scikit-learn**- Random Forest, accuracy assessment, feature importance
+- **Google Dynamic World** - cropland masking + training-location guidance
 - pandas / numpy / matplotlib / seaborn
 
 ---
